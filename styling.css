@@ -1,0 +1,52 @@
+
+/* Hero Section */
+
+
+
+
+
+
+/* Explore section */
+
+
+
+
+
+
+
+
+/* Teachers */
+.teachers {
+    padding: 40px 0;
+    text-align: center;
+    transition:0.5s;
+    position:relative;
+}
+.teachers:hover{
+    background:var(--clr);
+    box-shadow:0 0 35px var(--clr);
+}
+
+.border {
+    width: 160px;
+    height: 5px;
+    background: #f2be55;
+    margin: 26px auto;
+}
+
+.teacher {
+
+    margin: 10px;
+    margin-bottom: 50px;
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    line-height: 20px;
+    transition: all .2s ease-in-out;
+}
+
+
+.teacher:hover {
+    transform: scale(1.02);
+}
+/* Review */
