@@ -50,3 +50,53 @@
     transform: scale(1.02);
 }
 /* Review */
+.testimonials {
+    padding: 40px 0;
+}
+
+
+
+.border {
+    width: 160px;
+    height: 5px;
+    background: #6ab04c;
+    margin: 26px auto;
+}
+
+.testimonial {
+    background: #dbf6f8;
+    margin: 10px;
+    margin-bottom: 50px;
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    line-height: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.testimonial>svg {
+    width: 300px;
+    height: 300px;
+    flex-grow: 1;
+    border-radius: 50%;
+    margin-top: -110px;
+}
+
+.testimonial_right{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.testimonial_description {
+    margin-top: 21px;
+    
+}
+
+.testimonial_name {
+    margin-left:0px;
+    margin-top: -1px;
+}
+
+.testimonial:hover {
+    transform: scale(1.02);
+}
