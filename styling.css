@@ -62,6 +62,12 @@
 
 
 /* Explore section */
+.Explore{
+    padding: 40px 0;
+text-align: center;
+transition:0.5s;
+position:relative;
+}
       .box {
         position: relative;
         overflow: hidden;
