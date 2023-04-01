@@ -1,61 +1,61 @@
 
 /* Hero Section */
-#hero {
-			position: relative;
-			background-color: rgb(255, 255, 255);
-			width: 105%;
-			max-width: 100%; 
-			margin: 0; 
-			top: 20%;
-			left: -1%;
-		}
-		.image {
-			display: block;
-            left: 0%;
-			top: 2%;
-			opacity: 0.4;
-			width: 101.8%;
-			height: 400px;
-			background-color: #000000;
-			border-radius: 5px;
-		}
-		.text {
-			position: absolute;
-			top: 80%;
-			left: 59%;
-			transform: translate(-50%, -50%);
-			color: #000000; 
-			font-size: 2rem; 
-			font-weight: bold;
-			width: 100%;
-			max-width: 600px;
-		}
-		.quote{
-			position:absolute;
-			top: 54%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: #000000; 
-    	    font-size: 2rem; 
-			font-weight: bold;
-			text-align: center;
-			width: 100%;
-			max-width: 550px;
-		}
-		.logo{
-            position: absolute;
-            top: 21%;
-			left: 49%;
-			transform: translate(-50%, -50%);
-			color: #000000;
-			font-size: 2rem; 
-			font-weight: bold;
-			text-align: center;
-			width: 25%;
-			max-width: 800px;
-             
-            opacity: 1; 
-        }
+ #hero {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 105%;
+    max-width: 100%; 
+    margin: 0; 
+    top: 20%;
+    left: -1%;
+}
+.image {
+    display: block;
+    left: 0%;
+    top: 2%;
+    opacity: 1;
+    width: 101.8%;
+    height: 400px;
+    background-color: #000000;
+    border-radius: 5px;
+}
+.text {
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: #000000; 
+    font-size: 2rem; 
+    font-weight: bold;
+    width: 100%;
+    max-width: 600px;
+}
+.quote{
+    position:absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000; 
+    font-size: 2rem; 
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    max-width: 550px;
+}
+.logo{
+    position: absolute;
+    top: 21%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    font-size: 2rem; 
+    font-weight: bold;
+    text-align: center;
+    width: 25%;
+    max-width: 800px;
+     
+    opacity: 1; 
+}
 
 
 
