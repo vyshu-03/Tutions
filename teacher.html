@@ -1,233 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styling.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/eb3c934bad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body::-webkit-scrollbar{
+            display:none;
+        }
+        #hero {
+            position: relative;
+            background-color: rgb(255, 255, 255); 
+            width: 105%;
+            max-width: 100%;
+            margin: 0;
+            top: 20%;
+            left: -1%;
+        }
+
+        .image {
+            display: block;
+            left: 0%;
+            top: 2%;
+            opacity: 1;
+            width: 101.8%;
+            height: 400px;
+            background-color: #000000;
+            border-radius: 5px;
+        }
+
+        .text {
+            position: absolute;
+            top: 80%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            color: #000000;
+            font-size: 2rem;
+            font-weight: bold;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .quote {
+            position: absolute;
+            top: 54%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000000;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            max-width: 550px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 21%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            color: #000000;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            width: 25%;
+            max-width: 800px;
+
+            opacity: 1;
+        }
+
+
+
+
+
+       
+
+
+        /* Teachers */
+        .teachers {
+            padding: 40px 0;
+            text-align: center;
+            transition: 0.5s;
+            position: relative;
+        }
+
+        .teachers:hover {
+            background: var(--clr);
+            box-shadow: 0 0 35px var(--clr);
+        }
+
+        .teacher_border {
+            width: 160px;
+            height: 5px;
+            background: #f2be55;
+            margin: 26px auto;
+        }
+
+        .teacher {
+
+            margin: 10px;
+            margin-bottom: 50px;
+            width: 350px;
+            height: 300px;
+            padding: 20px;
+            line-height: 20px;
+            transition: all .2s ease-in-out;
+        }
+
+
+        .teacher:hover {
+            transform: scale(1.02);
+        }
+
+        /* Review */
+        .testimonials {
+            padding: 40px 0;
+        }
+
+
+
+        .testimonial_border {
+            width: 160px;
+            height: 5px;
+            background: #6ab04c;
+            margin: 26px auto;
+        }
+
+        .testimonial {
+            background: #dbf6f8;
+            margin: 10px;
+            margin-bottom: 50px;
+            width: 400px;
+            height: 250px;
+            padding: 20px;
+            line-height: 20px;
+            transition: all .2s ease-in-out;
+        }
+
+        .testimonial>svg {
+            width: 300px;
+            height: 300px;
+            flex-grow: 1;
+            border-radius: 50%;
+            margin-top: -110px;
+        }
+
+        .testimonial_right {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .testimonial_description {
+            margin-top: 21px;
+
+        }
+
+        .testimonial_name {
+            margin-left: 0px;
+            margin-top: -1px;
+        }
+
+        .testimonial:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-login {
+
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 8px 4px;
+            cursor: pointer;
+            position: absolute;
+            top: -5px;
+            left: 0;
+        }
+
+        .works_container {
+            padding: 30px 0;
+            text-align: center;
+            transition: 0.5s;
+            position: relative;
+        }
+
+        .works_flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .works_flex-box {
+            width: 30%;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+            border: 2px;
+
+        }
+
+        .works_border {
+            width: 160px;
+            height: 5px;
+            background: #286560;
+            margin: 26px auto;
+        }
+
+        .dot {
+            height: 100px;
+            width: 100px;
+            background-color: #16b4a7;
+            border-radius: 50%;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* reviews */
+
+        h2 {
+            color: #13272f;
+        }
+
+        .reveal {
+            position: relative;
+            transform: translateY(50px);
+            opacity: 0;
+            transition: 1.9s all ease;
+        }
+
+        .active {
+            transform: translateY(0);
+            opacity: 0.9;
+        }
+
+
+        .testimonial_border {
+            width: 160px;
+            height: 5px;
+            background: #286560;
+            margin: 26px auto;
+        }
+
+        .testimonials {
+            margin-top: 10px;
+        }
+
+        .testimonial {
+
+            background: #16b4a7;
+            margin: 10px;
+            margin-bottom: 50px;
+            width: 350px;
+            height: 250px;
+            padding: 20px;
+            line-height: 20px;
+            transition: all .2s linear;
+            transform: scale(0);
+
+        }
+
+        .testimonial_up>svg {
+            width: 58px;
+            height: 78px;
+        }
+
+        .testimonial_right {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .testimonial_description {
+            margin-top: 21px;
+
+        }
+
+        .testimonial_name {
+            margin-left: 0px;
+            margin-top: -1px;
+        }
+
+        .testimonial:hover {
+            background-color: #33c7bb;
+        }
+
+        .testimonials_row {
+            margin: 0px;
+        }
+
+        /* footer */
+
+        .footer {
+            margin-top: 23px;
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            bottom: 0;
+        }
+
+        .footer_container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+
+
+        ol,
+        ul {
+            list-style: none;
+            padding-left: 0px !important
+        }
+
+        .footer {
+            background-color: #13272f;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #286560;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        @media(max-width:767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+
+            .herosection_img {
+                display: none;
+            }
+        }
+
+        @media(max-width:574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+        /* Explore */
+        .explore .container {
+  margin-top: 50px;
+}
+
+/* Style for the image links */
+.explore .image-link {
+  position: relative;
+  display: block;
+}
+
+/* Style for the overlay div */
+.explore .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style for the text inside the overlay div */
+.explore .text {
+  color: whiteha ok;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style for the overlay div when hovering over the image link */
+.explore .image-link:hover .overlay {
+  opacity: 0.18;
+}
+
+/* Style for the images */
+.explore img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10%;
+}
+
+/* Style for the heading */
+.explore h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+    </style>
     <title>Mentoring</title>
 </head>
+
 <body>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="width:99%"">
-		<div class="container-fluid">
-		  <a class="navbar-brand" href="#">. &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;        </a>
-		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav">
-			  <li class="nav-item">
-				<a class="nav-link active" aria-current="page" href="#">Home</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#">Features</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#">Pricing</a>
-			  </li>
-			  <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				  Dropdown link
-				</a>
-				<ul class="dropdown-menu">
-				  <li><a class="dropdown-item" href="#">Action</a></li>
-				  <li><a class="dropdown-item" href="#">Another action</a></li>
-				  <li><a class="dropdown-item" href="#">Something else here</a></li>
-				</ul>
-			  </li>
-        
-			</ul>
-		  </div>
-		</div>
-	  </nav>
-    <li class="btn-login">
-      <button type="submit" class="btn btn-outline-dark">Login</button>
-    </li>
-	
-	<section class="hero">
-	<div class="container" id="hero">
-		<img class="image" src="C:\Users\PUJITHA RUPA\Downloads\website-tuition corousal (1).png" alt="Example Image">
-		<!-- https://junipereducation.org/wp-content/uploads/2022/06/teacher-using-different-teaching-methods-featured.jpg -->
-		<!-- <p class="quote ali">A good teacher can change everything</p>
-    <img src="https://theneuronstore.com/wp-content/uploads/2023/02/Artboard-1.png" class="logo"> -->
-		<div class="text">
-			
-			
-			<nav class="navbar">
-				<div class="container-fluid">
-				  <form class="d-flex" role="search">
-					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-success" type="submit">Search</button>
-				  </form>
-				</div>
-			  </nav>
-        
-		</div>
-    
-		
-	</div>
-	</section>
- <div class="Explore">
-    <center> <h1 style="color:#f90695">Explore Us</h1></center>
-    <div class="border"></div>
-        <div class="container">
-        <br><br>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="width:99%">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container" id="hero">
+            <img class="image"
+                src="https://rameshys.s3.eu-north-1.amazonaws.com/clubimg/website-tuition+corousal+(1).png"
+                alt="Example Image">
+            <div class="text">
+
+
+                <nav class="navbar">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+
+            </div>
+
+
+        </div>
+    </section>
+    <div class="row">
+    <div class="col-sm-12 text-center">
+       <a href="studentfinal.html"><button class="btn btn-primary btn-md mt-4" style="border-radius:15px">Login as a Student</button></a> 
+        <a href="tutorfinal.html"><button class="btn btn-success btn-md mt-4" style="border-radius:15px">Login as a Tutor</button></a>
+     </div>
+</div>
+  <br>
+  <div class="explore">
+    <h1 align="center">EXPLORE US</h1>
+    <marquee behavior="slide" direction="left" loop="1" scrollamount="20" >
+    <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="box">
-            <img src="https://m.economictimes.com/thumb/msid-93311573,width-1200,height-900,resizemode-4,imgsize-47016/online-schooling.jpg" class="img-fluid">
-            <div class="title">Schooling</div>
-            <div class="description">Click The Above Button For Demo Video</div>
-            <a href="https://youtu.be/L941re_Qu9A"><button type="button" class="btn btn-primary button">View Tutorial</button></a>
-          </div>
+        <div class="col-sm-3">
+          <a href="demo.html" class="image-link">
+            <img src="https://rameshys.s3.eu-north-1.amazonaws.com/exp/school.jpg" alt="Image 1">
+            <div class="overlay">
+              <div class="text" >CLICK FOR <br> SCHOOLING TUTIONS</div>
+            </div>
+          </a>
         </div>
-        <div class="col-sm-4">
-          <div class="box">
-            <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-51524,resizemode-1,msid-87848742/small-biz/sme-sector/specialized-higher-education-is-bridging-the-gap-between-industry-requirements-and-formal-education.jpg" class="img-fluid">
-            <div class="title">Intermediate</div>
-            <div class="description">Click The Above Button For Demo Video</div>
-            <a href="https://youtu.be/L941re_Qu9A"><button type="button" class="btn btn-primary button">View Tutorial</button></a>
-          </div>
+        <div class="col-sm-3">
+          <a href="demo.html" class="image-link">
+            <img src="https://rameshys.s3.eu-north-1.amazonaws.com/exp/interme.jpg" alt="Image 2">
+            <div class="overlay">
+              <div class="text">CLICK FOR <br> INTERMEDIATE TUTIONS</div>
+            </div>
+          </a>
         </div>
-        <div class="col-sm-4">
-          <div class="box">
-            <img src="https://images.theconversation.com/files/151920/original/image-20170106-18641-uam2in.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop" class="img-fluid">
-            <div class="title">Engineering</div>
-            <div class="description">Click The Above Button For Demo Video</div>
-            <a href="https://youtu.be/L941re_Qu9A"><button type="button" class="btn btn-primary button">View Tutorial</button></a>
-          </div>
+        <div class="col-sm-3">
+          <a href="demo.html" class="image-link">
+            <img src="https://rameshys.s3.eu-north-1.amazonaws.com/exp/enggi.jpg" alt="Image 3">
+            <div class="overlay">
+              <div class="text">CLICK FOR <br> ENGINEERING TUTIONS</div>
+            </div>
+          </a>
         </div>
-     <div>
-    
+        <div class="col-sm-3">
+          <a href="demo.html" class="image-link">
+            <img src="https://rameshys.s3.eu-north-1.amazonaws.com/exp/music.jpg" alt="Image 4">
+            <div class="overlay">
+              <div class="text">CLICK FOR <br>MUSIC AND DANCE <br> COACHING</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    </marquee>
+  </div>
+
+
+
+
     <div class="teachers">
 
-                
-    
-        <center> <h1 style="color:#f90695">Meet Our Pro Mentors</h1></center>
-            <div class="border"></div>
-            <div class="teachers_row d-flex justify-content-center flex-wrap reveal" style="--clr:blue">
-                <div class="teacher d-flex flex-row flex-wrap" >
-                    <div class="teacher_header d-flex flex-column justify-content-center">
-    
-                        <iframe width="300" height="200" src="https://www.youtube.com/embed/5Kv3M234_x8">
-                        </iframe>
-                    </div>
-                    <div class="teacher_body py-3">
-                        <div class="teacher_name"> 
-                            <u><h2 style="color:#fb6b04">Shoukath Ali</h2> </u> 
-                            B.tech in CSE from Andhra University<br>
-                            Master in C++<br>
-                            ⭐⭐⭐⭐⭐(55 reviews) </div>
-                    </div>
+
+
+        <center>
+            <h1 style="color:black">Our Mentors</h1>
+        </center>
+        <div class="teacher_border"></div>
+        <div class="teachers_row d-flex justify-content-center flex-wrap reveal" style="--clr:blue">
+            <div class="teacher d-flex flex-row flex-wrap">
+                <div class="teacher_header d-flex flex-column justify-content-center">
+
+                    <iframe width="300" height="200" src="https://www.youtube.com/embed/5Kv3M234_x8">
+                    </iframe>
                 </div>
-                <div class="teacher d-flex flex-row flex-wrap">
-                    <div class="teacher_header d-flex flex-column justify-content-center">
-    
-                        <iframe width="300" height="200" src="https://www.youtube.com/embed/emQUnHEiXfQ">
-                        </iframe>
-                    </div>
-                    <div class="teacher_body py-3">
-                        <div class="teacher_name">
-                            <u><h2 style="color:#fb6b04">Sohana</h2></u>
-                            B.tech in CSE from Andhra University<br>
-                            Pioneer in Digital Logic Design<br>
-                            ⭐⭐⭐⭐(35 reviews)</div>
-                    </div>
-                </div>
-                <div class="teacher d-flex flex-row flex-wrap">
-                    <div class="teacher_header d-flex flex-column justify-content-center">
-    
-                        <iframe width="300" height="200" src="https://www.youtube.com/embed/OdWunYgH_cY">
-                        </iframe>
-                    </div>
-                    <div class="teacher_body py-3">
-                        <div class="teacher_name"> 
-                            <u><h2 style="color:#fb6b04">Samuel Susan</h2></u>
-                             B.tech in CSE from Andhra University<br>
-                            Skilled in FLAT<br>
-                            ⭐⭐⭐⭐(40 reviews) </div>
+                <div class="teacher_body py-3">
+                    <div class="teacher_name">
+                        <u>
+                            <h2 style="color:#fb6b04;">Shoukath Ali</h2>
+                        </u>
+                        B.tech in CSE from Andhra University<br>
+                        Master in C++<br>
+                        ⭐⭐⭐⭐⭐(55 reviews)
                     </div>
                 </div>
             </div>
-    
-    </div>
-    <div class="testimonials">
+            <div class="teacher d-flex flex-row flex-wrap">
+                <div class="teacher_header d-flex flex-column justify-content-center">
 
-        <center><h1 style="color:#f90695">Reviews</h1></center>
-        <div class="border"></div>
+                    <iframe width="300" height="200" src="https://www.youtube.com/embed/emQUnHEiXfQ">
+                    </iframe>
+                </div>
+                <div class="teacher_body py-3">
+                    <div class="teacher_name">
+                        <u>
+                            <h2 style="color:#fb6b04">Sohana</h2>
+                        </u>
+                        B.tech in CSE from Andhra University<br>
+                        Pioneer in Digital Logic Design<br>
+                        ⭐⭐⭐⭐(35 reviews)
+                    </div>
+                </div>
+            </div>
+            <div class="teacher d-flex flex-row flex-wrap">
+                <div class="teacher_header d-flex flex-column justify-content-center">
+
+                    <iframe width="300" height="200" src="https://www.youtube.com/embed/OdWunYgH_cY">
+                    </iframe>
+                </div>
+                <div class="teacher_body py-3">
+                    <div class="teacher_name">
+                        <u>
+                            <h2 style="color:#fb6b04">Samuel Susan</h2>
+                        </u>
+                        B.tech in CSE from Andhra University<br>
+                        Skilled in FLAT<br>
+                        ⭐⭐⭐⭐(40 reviews)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="works_container">
+        <h2>Connect With Your Personal Mentor</h2>
+        <div class="works_border"></div>
+        <div class="works_row">
+            <div class="works_flex-container">
+                <div class="works_flex-box">
+                    <br>
+                    <i class="bi bi-1-square-fill"></i>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-1-square-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm7.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383h1.312Z" />
+                    </svg>
+                    <br>
+                    <br>
+                    <span class="dot">
+                        <i class="bi bi-calendar-event"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30S" fill="white"
+                            class="bi bi-calendar-event" viewBox="0 0 16 16">
+                            <path
+                                d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                            <path
+                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                        </svg>
+                    </span>
+                    <br>
+                    <br>
+                    <h4>Fill the Form to Book a Slot</h4>
+                </div>
+                <div class="works_flex-box">
+                    <br>
+                    <i class="bi bi-2-square-fill"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-2-square-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm4.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306Z" />
+                    </svg>
+                    <br>
+                    <br>
+                    <span class="dot">
+                        <i class="bi bi-laptop"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30S" fill="white"
+                            class="bi bi-laptop" viewBox="0 0 16 16">
+                            <path
+                                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
+                        </svg>
+                    </span>
+                    <br>
+                    <br>
+                    <h4>Join LIVE Demo Class</h4>
+                </div>
+                <div class="works_flex-box">
+                    <br>
+                    <i class="bi bi-3-square-fill"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-3-square-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2Zm5.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318Z" />
+                    </svg>
+                    <br>
+                    <br>
+                    <span class="dot">
+                        <i class="bi bi-book"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30S" fill="white" class="bi bi-book"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                        </svg>
+                    </span>
+                    <br>
+                    <br>
+                    <h4>Start the Course</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <center>
+            <h2 style="color:#13272f;">Reviews</h1>
+        </center>
+        <div class="testimonial_border"></div>
         <div class="testimonials_row d-flex justify-content-center flex-wrap reveal">
 
-            <div class="testimonial d-flex">
+            <div class="testimonial d-flex flex-column">
+                <div class="testimonial_up d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-circle align-self-start" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-person-circle align-self-start" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                </svg>
 
+                    <div class="testimonial_right d-flex flex-column justify-content-start">
+                        <div class="testimonial_name">P.Suresh</div>
+                        <div class="testimonial_stars">⭐⭐⭐⭐</div>
+                        <div class="testimonial_course">Completed C++ course</div>
+                    </div>
+                </div>
 
-                <div class="testimonial_right d-flex flex-column justify-content-start">
-                    <div class="testimonial_name">P.Suresh</div>
-                    <div class="testimonial_stars">⭐⭐⭐⭐</div>
-                    <div class="testimonial_course">Completed C++ course</div>
+                <div class="testimonial_down">
                     <p class="testimonial_description">
-                        "I 've been part of the community for one year and the way you all arrange skilloriented
-                        seminars and amazing events is amazing. Learned many skills and got exposure to the outer
+                        "I 've been part of the community for one year and the way you all arrange
+                        skilloriented
+                        seminars and amazing events is amazing. Learned many skills and got exposure to
+                        the outer
                         world."
                     </p>
                 </div>
 
             </div>
+            <div class="testimonial d-flex flex-column">
+                <div class="testimonial_up d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-circle align-self-start" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
 
-            <div class="testimonial d-flex">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-person-circle align-self-start" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                </svg>
+                    <div class="testimonial_right d-flex flex-column justify-content-start">
+                        <div class="testimonial_name">P.Suresh</div>
+                        <div class="testimonial_stars">⭐⭐⭐⭐</div>
+                        <div class="testimonial_course">Completed C++ course</div>
+                    </div>
+                </div>
 
-
-                <div class="testimonial_right d-flex flex-column justify-content-start">
-                    <div class="testimonial_name">P.Suresh</div>
-                    <div class="testimonial_stars">⭐⭐⭐⭐</div>
-                    <div class="testimonial_course">Completed C++ course</div>
+                <div class="testimonial_down">
                     <p class="testimonial_description">
-                        "I 've been part of the community for one year and the way you all arrange skilloriented
-                        seminars and amazing events is amazing. Learned many skills and got exposure to the outer
+                        "I 've been part of the community for one year and the way you all arrange
+                        skilloriented
+                        seminars and amazing events is amazing. Learned many skills and got exposure to
+                        the outer
                         world."
                     </p>
                 </div>
 
             </div>
+            <div class="testimonial d-flex flex-column">
+                <div class="testimonial_up d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-circle align-self-start" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
 
-            <div class="testimonial d-flex">
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-person-circle align-self-start" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                </svg>
+                    <div class="testimonial_right d-flex flex-column justify-content-start">
+                        <div class="testimonial_name">P.Suresh</div>
+                        <div class="testimonial_stars">⭐⭐⭐⭐</div>
+                        <div class="testimonial_course">Completed C++ course</div>
+                    </div>
+                </div>
 
-
-                <div class="testimonial_right d-flex flex-column justify-content-start">
-                    <div class="testimonial_name">P.Suresh</div>
-                    <div class="testimonial_stars">⭐⭐⭐⭐</div>
-                    <div class="testimonial_course">Completed C++ course</div>
+                <div class="testimonial_down">
                     <p class="testimonial_description">
-                        "I 've been part of the community for one year and the way you all arrange skilloriented
-                        seminars and amazing events is amazing. Learned many skills and got exposure to the outer
+                        "I 've been part of the community for one year and the way you all arrange
+                        skilloriented
+                        seminars and amazing events is amazing. Learned many skills and got exposure to
+                        the outer
                         world."
                     </p>
                 </div>
@@ -237,5 +820,92 @@
 
 
     </div>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="d-flex flex-row">
+                <div class="footer-col">
+                    <h4>Edumoon</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">clubs</a></li>
+                        <li><a href="#">Recent Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">email</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/theEduMoon1/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/theedumoon?lang=en" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/theedumoon/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://in.linkedin.com/company/edumoon" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const revealfun = () => {
+            var reveals = document.querySelectorAll(".reveal");
+            var elementTop = reveals[0].getBoundingClientRect().top;
+            var elementTop2 = reveals[1].getBoundingClientRect().top;
+
+            var elementVisible = 700;
+            console.log(elementTop);
+
+            if (elementTop <= elementVisible) {
+
+                if (!reveals[0].classList.contains("active")) {
+                    reveals[0].classList.add("active");
+                }
+
+            }
+            if (elementTop2 <= elementVisible) {
+
+                if (!reveals[1].classList.contains("active")) {
+                    let animation = anime({
+                        targets: '.testimonial',
+
+                        scale: {
+                            value: [0, 1],
+                            duration: 1500,
+                            delay: 100,
+                            easing: 'easeOutQuad'
+                        },
+
+                    });
+                    reveals[1].classList.add("active");
+                }
+
+            }
+
+        }
+
+        window.addEventListener("scroll", revealfun);
+
+
+    </script>
 </body>
+
 </html>
